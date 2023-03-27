@@ -1,7 +1,6 @@
-from mapper_task import MapperTask
 import grpc
-from map_manager import MapManager
-from word_count_pb2_grpc import add_MapManagerServicer_to_server
+from word_count_pb2 import *
+from word_count_pb2_grpc import *
 
 class MapManager:
     def __init__(self):
