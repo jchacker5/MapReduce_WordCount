@@ -1,0 +1,9 @@
+To test the implementation, you can follow these steps:
+
+Start the gRPC servers for the master, map manager, and reduce manager nodes by running the serve() method in master.py, map_manager.py, and reduce_manager.py files respectively. You can do this by running each of these files in separate terminals using the python command.
+
+Once the servers are running, you can run the main() function in client.py using the python command. This will start the MapReduce job and write the output to a file named output.txt.
+
+After the job is completed, you can open the output.txt file to see the word count for each word in the input file.
+
+Make sure that the input file is located in the directory specified in the input_file_path variable in the config.py file, and that the IP addresses of the machines running the map and reduce managers are listed in the machine_ips variable in the same file.
