@@ -26,4 +26,4 @@ After the job is completed, you can open the output.txt file to see the word cou
 Make sure that the input file is located in the directory specified in the input_file_path variable in the config.py file, and that the IP addresses of the machines running the map and reduce managers are listed in the machine_ips variable in the same file.
 
 Credits
-This implementation was created by Josph Defendre. Feel free to use it, modify it, or distribute it under the terms of the MIT License.
+This implementation was created by Joseph Defendre. Feel free to use it, modify it, or distribute it under the terms of the MIT License.
