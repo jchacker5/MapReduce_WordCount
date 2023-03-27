@@ -13,29 +13,33 @@ _sym_db = _symbol_database.Default()
 
 
 
-DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n\x10word_count.proto\x12\twordcount\"*\n\x0fStartJobRequest\x12\x17\n\x0finput_file_path\x18\x01 \x01(\t\"#\n\x10StartJobResponse\x12\x0f\n\x07success\x18\x01 \x01(\x08\"*\n\x14\x43reateMapTaskRequest\x12\x12\n\ninput_line\x18\x01 \x01(\t\"\x17\n\x15\x43reateMapTaskResponse\",\n\x1dGetOrCreateReducerTaskRequest\x12\x0b\n\x03key\x18\x01 \x01(\t\" \n\x1eGetOrCreateReducerTaskResponse2M\n\x06Master\x12\x43\n\x08StartJob\x12\x1a.wordcount.StartJobRequest\x1a\x1b.wordcount.StartJobResponse2`\n\nMapManager\x12R\n\rCreateMapTask\x12\x1f.wordcount.CreateMapTaskRequest\x1a .wordcount.CreateMapTaskResponse2~\n\rReduceManager\x12m\n\x16GetOrCreateReducerTask\x12(.wordcount.GetOrCreateReducerTaskRequest\x1a).wordcount.GetOrCreateReducerTaskResponseb\x06proto3')
+DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n\x10word_count.proto\x12\twordcount\"*\n\x0fStartJobRequest\x12\x17\n\x0finput_file_path\x18\x01 \x01(\t\"#\n\x10StartJobResponse\x12\x0f\n\x07success\x18\x01 \x01(\x08\"*\n\x14\x43reateMapTaskRequest\x12\x12\n\ninput_line\x18\x01 \x01(\t\"\x8e\x01\n\x15\x43reateMapTaskResponse\x12\x43\n\nword_count\x18\x01 \x03(\x0b\x32/.wordcount.CreateMapTaskResponse.WordCountEntry\x1a\x30\n\x0eWordCountEntry\x12\x0b\n\x03key\x18\x01 \x01(\t\x12\r\n\x05value\x18\x02 \x01(\x05:\x02\x38\x01\",\n\x1dGetOrCreateReducerTaskRequest\x12\x0b\n\x03key\x18\x01 \x01(\t\"<\n\x1eGetOrCreateReducerTaskResponse\x12\x0b\n\x03key\x18\x01 \x01(\t\x12\r\n\x05\x63ount\x18\x02 \x01(\x05\x32M\n\x06Master\x12\x43\n\x08StartJob\x12\x1a.wordcount.StartJobRequest\x1a\x1b.wordcount.StartJobResponse2`\n\nMapManager\x12R\n\rCreateMapTask\x12\x1f.wordcount.CreateMapTaskRequest\x1a .wordcount.CreateMapTaskResponse2~\n\rReduceManager\x12m\n\x16GetOrCreateReducerTask\x12(.wordcount.GetOrCreateReducerTaskRequest\x1a).wordcount.GetOrCreateReducerTaskResponseb\x06proto3')
 
 _builder.BuildMessageAndEnumDescriptors(DESCRIPTOR, globals())
 _builder.BuildTopDescriptorsAndMessages(DESCRIPTOR, 'word_count_pb2', globals())
 if _descriptor._USE_C_DESCRIPTORS == False:
 
   DESCRIPTOR._options = None
+  _CREATEMAPTASKRESPONSE_WORDCOUNTENTRY._options = None
+  _CREATEMAPTASKRESPONSE_WORDCOUNTENTRY._serialized_options = b'8\001'
   _STARTJOBREQUEST._serialized_start=31
   _STARTJOBREQUEST._serialized_end=73
   _STARTJOBRESPONSE._serialized_start=75
   _STARTJOBRESPONSE._serialized_end=110
   _CREATEMAPTASKREQUEST._serialized_start=112
   _CREATEMAPTASKREQUEST._serialized_end=154
-  _CREATEMAPTASKRESPONSE._serialized_start=156
-  _CREATEMAPTASKRESPONSE._serialized_end=179
-  _GETORCREATEREDUCERTASKREQUEST._serialized_start=181
-  _GETORCREATEREDUCERTASKREQUEST._serialized_end=225
-  _GETORCREATEREDUCERTASKRESPONSE._serialized_start=227
-  _GETORCREATEREDUCERTASKRESPONSE._serialized_end=259
-  _MASTER._serialized_start=261
-  _MASTER._serialized_end=338
-  _MAPMANAGER._serialized_start=340
-  _MAPMANAGER._serialized_end=436
-  _REDUCEMANAGER._serialized_start=438
-  _REDUCEMANAGER._serialized_end=564
+  _CREATEMAPTASKRESPONSE._serialized_start=157
+  _CREATEMAPTASKRESPONSE._serialized_end=299
+  _CREATEMAPTASKRESPONSE_WORDCOUNTENTRY._serialized_start=251
+  _CREATEMAPTASKRESPONSE_WORDCOUNTENTRY._serialized_end=299
+  _GETORCREATEREDUCERTASKREQUEST._serialized_start=301
+  _GETORCREATEREDUCERTASKREQUEST._serialized_end=345
+  _GETORCREATEREDUCERTASKRESPONSE._serialized_start=347
+  _GETORCREATEREDUCERTASKRESPONSE._serialized_end=407
+  _MASTER._serialized_start=409
+  _MASTER._serialized_end=486
+  _MAPMANAGER._serialized_start=488
+  _MAPMANAGER._serialized_end=584
+  _REDUCEMANAGER._serialized_start=586
+  _REDUCEMANAGER._serialized_end=712
 # @@protoc_insertion_point(module_scope)

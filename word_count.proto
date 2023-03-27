@@ -27,13 +27,16 @@ message CreateMapTaskRequest {
 }
 
 message CreateMapTaskResponse {
-    // Fields for the mapper task result
+    map<string, int32> word_count = 1;
 }
+
 
 message GetOrCreateReducerTaskRequest {
     string key = 1;
 }
 
 message GetOrCreateReducerTaskResponse {
-    // Fields for the reducer task result
+    string key = 1;
+    int32 count = 2;
 }
+
