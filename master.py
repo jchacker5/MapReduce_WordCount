@@ -30,7 +30,13 @@ class Master:
                 output_file.write(f'{word}: {reducer_task.count}\n')
 
         print("Job completed. Output written to 'output.txt'.")
-
+def serve():
+    server = grpc.server(futures.ThreadPoolExecutor(max_workers=10))
+    add_MasterServicer_to_server(Master(machine_ips, input_file_path), server)
+    server.add_insecure_port('[::]:50051')
+    server.start()
+    print('Master node started on port 50051')
+    server.wait_for_termination()
 def main():
     master = Master(machine_ips, input_file_path)
     master.start_job()

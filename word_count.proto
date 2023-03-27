@@ -1,0 +1,39 @@
+syntax = "proto3";
+
+package wordcount;
+
+service Master {
+    rpc StartJob (StartJobRequest) returns (StartJobResponse);
+}
+
+service MapManager {
+    rpc CreateMapTask (CreateMapTaskRequest) returns (CreateMapTaskResponse);
+}
+
+service ReduceManager {
+    rpc GetOrCreateReducerTask (GetOrCreateReducerTaskRequest) returns (GetOrCreateReducerTaskResponse);
+}
+
+message StartJobRequest {
+    string input_file_path = 1;
+}
+
+message StartJobResponse {
+    bool success = 1;
+}
+
+message CreateMapTaskRequest {
+    string input_line = 1;
+}
+
+message CreateMapTaskResponse {
+    // Fields for the mapper task result
+}
+
+message GetOrCreateReducerTaskRequest {
+    string key = 1;
+}
+
+message GetOrCreateReducerTaskResponse {
+    // Fields for the reducer task result
+}
